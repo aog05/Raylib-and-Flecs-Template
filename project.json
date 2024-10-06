@@ -1,0 +1,37 @@
+{
+  "id": "RaFT",
+  "type": "application",
+  "value": {
+    "use": ["flecs"],
+    "standalone": true
+  },
+  "lang.c": {
+    "lib": ["raylib"],
+    "${os linux}": {
+      "lib": ["rt", "pthread", "m", "GL", "X11", "Xi", "Xcursor", "dl"]
+    },
+    "${os windows}": {
+      "lib": ["ws2_32"],
+      "defines": ["_WINDOWS", "_USRDLL", "CGLM_EXPORTS", "CGLM_DLL"]
+    },
+    "${cfg sanitize}": {
+      "defines": ["FLECS_SANITIZE"]
+    },
+    "${os darwin}": {
+      "ldflags": [
+        "-framework Cocoa",
+        "-framework CoreVideo",
+        "-framework IOKit",
+        "-framework GLUT",
+        "-framework OpenGL"
+      ]
+    },
+    "${target em}": {
+      "ldflags": ["-sMAX_WEBGL_VERSION=2"],
+      "${cfg debug}": {
+        "ldflags": ["-s GL_DEBUG=1"]
+      },
+      "embed": ["etc/sokol/shaders"]
+    }
+  }
+}
