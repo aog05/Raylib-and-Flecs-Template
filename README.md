@@ -23,19 +23,9 @@ Also, run `git --version` to make sure it installed correctly. The result should
 
 **3. Install Bake**
 
-Now, we have to install **bake**. Chose a folder/directory somewhere on your computer and write `cd` in your terminal then drag and drop your folder/directory. It should look like this:
-```
-cd /drag/and/drop/a/directory/into/your/terminal
-  ^ Remeber the space
-```
-This is where we will setup the bake compiler.
+Go to this link ([Bake Compiler](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
 
-Once you are in that directory in your terminal, run both of these commands.
-```
-git clone https://github.com/SanderMertens/bake
-bake/setup.sh
-```
-If `bake/setup.sh` doesn't work you can always run `cd bake; ./setup.sh` instead.
+Once downloaded, open the folder. Open a new terminal and drag and drop `setup.sh` into the terminal window. Press return (or enter) in the terminal, enter your password if asked, and close the terminal when done.
 
 Again, ensure it installed correctly with:
 ```
