@@ -8,10 +8,10 @@
   "lang.c": {
     "lib": ["raylib"],
     "${os linux}": {
-      "lib": ["rt", "pthread", "m", "GL", "X11", "Xi", "Xcursor", "dl"]
+      "lib": ["rt", "pthread", "m", "GL", "X11", "Xi", "Xcursor", "dl", "raylib"]
     },
     "${os windows}": {
-      "lib": ["ws2_32"],
+      "lib": ["ws2_32", "gdi32", "opengl32", "winmm", "kernel32", "raylib"],
       "defines": ["_WINDOWS", "_USRDLL", "CGLM_EXPORTS", "CGLM_DLL"]
     },
     "${cfg sanitize}": {
