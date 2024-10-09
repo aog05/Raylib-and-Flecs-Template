@@ -1,6 +1,6 @@
 #include <RaFT.h>
 
-int main(int argc, char *argv[]) {
+int main() {
   InitWindow(400, 224, "Your Project Title");
 
   while (!WindowShouldClose()) {

@@ -2,7 +2,7 @@
   "id": "RaFT",
   "type": "application",
   "value": {
-    "use": ["flecs"],
+    "use": ["flecs", "raylib", "raymath"],
     "standalone": true
   },
   "lang.c": {
