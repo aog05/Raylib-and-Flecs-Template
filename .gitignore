@@ -1,6 +1,5 @@
 .bake_cache
 .DS_Store
-.vscode
 gcov
 bin
 vc140.pdb
