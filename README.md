@@ -89,6 +89,7 @@ First, follow this link ([Download Bulid Tools](https://visualstudio.microsoft.c
 Once it finishes downloading, open the Visual Studio Installer and click "Modify". After that, select "Desktop Development with C++" and click "Modify" in the bottom right. You can close the installer once it finishes installing.
 
 **3. Install Bake**
+
 Go to this link ([Bake Compiler](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
 
 Once downloaded, right-click the zip folder and click "Extract All...". open the folder. Open a new terminal, type `cd`, drag and drop the folder inside (should be called "bake-master") into the terminal window, and hit enter.
@@ -141,7 +142,7 @@ bake new your_project_name -t RaFT
 
 Run the program with: `bake run`.
 
-If you ever want to make a new project, all you have to do is repeat step this step.
+If you ever want to make a new project, all you have to do is repeat this step.
 
 ## Build for Web
 

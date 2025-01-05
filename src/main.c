@@ -1,6 +1,7 @@
 #include <${id underscore}.h>
 
 int main(int argc, char *argv[]) {
+    SetTargetFPS(30);
     InitWindow(800, 448, "Test");
     ecs_world_t *world = ecs_init();
     ecs_entity_t ray = ecs_entity(world, { .name = "raysan5" });
