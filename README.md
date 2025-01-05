@@ -104,7 +104,7 @@ Run `./setup.bat` after that.
 
 **4. Raylib and Flecs libraries**
 
-Download this zip file ([Windows Raylib Library](https://github.com/user-attachments/files/17962559/raylibdll.lib.zip)) and unzip it once it's downloaded.
+Download this zip file ([Raylib for x32](https://github.com/user-attachments/files/18310969/raylibdll.zip) or [Raylib for x64](https://github.com/user-attachments/files/18310976/raylibdll.zip)) and unzip it once it's downloaded.
 
 Open "File Explorer" and go to C:\Users\*you*\bake\lib and put this raylib library in it.
 
