@@ -41,7 +41,7 @@ cd
 git clone https://github.com/raysan5/raylib.git
 ```
 
-Download this [flecs package](https://github.com/user-attachments/files/17963061/flecs.zip), unzip it, and run:
+Download this [flecs package](https://github.com/user-attachments/files/20028357/flecs.zip), unzip it, and run:
 ```
 cd /path/to/flecs
 bake
