@@ -62,14 +62,14 @@ bake Raylib-and-Flecs-Template
 
 **6. Create the Project**
 
-Go to a folder where you like this project to be. I put mine in a folder called, _"Raylib Projects"_ and run this command.
+Go to a folder where you like this project to be. I put mine in a folder called, *"Raylib Projects"* and run this command.
 ```bash
 bake new your_project_name -t RaFT
 ```
 
 Run the program with: `bake run`.
 
-If you ever want to make a new project, all you have to do is repeat step this step.
+If you ever want to make a new project, all you have to do is repeat this step.
 
 ## Windows
 Windows is a slightly tougher version to build for, so if there are any problems, you can report them here or on Discord.
@@ -106,7 +106,7 @@ Run `./setup.bat` after that.
 
 Download this zip file ([Raylib for x32](https://github.com/user-attachments/files/18310969/raylibdll.zip) or [Raylib for x64](https://github.com/user-attachments/files/18310976/raylibdll.zip)) and unzip it once it's downloaded.
 
-Open "File Explorer" and go to C:\Users\*you*\bake\lib and put this raylib library in it.
+Open "File Explorer" and go to C:\Users\\*you*\bake\lib and put this raylib library in it.
 
 Download the raylib source files by running,
 ```powershell
@@ -115,7 +115,7 @@ git clone https://github.com/raysan5/raylib.git
 ```
 
 Download this [flecs package](https://github.com/user-attachments/files/17963061/flecs.zip), unzip it, and run:
-```
+```powershell
 cd \path\to\flecs
 bake
 ```

@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "preLaunchTask": "bake-debug",
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug",
+      "program": "${workspaceFolder}/bin/arm64-Darwin-sanitize/${id underscore}",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "preLaunchTask": "bake-release",
+      "type": "lldb",
+      "request": "launch",
+      "name": "Release",
+      "program": "${workspaceFolder}/bin/arm64-Darwin-release/${id underscore}",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

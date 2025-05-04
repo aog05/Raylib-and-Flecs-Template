@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "bake-debug",
+      "command": "bake",
+      "args": [],
+      "type": "shell"
+    },
+    {
+      "label": "bake-release",
+      "command": "bake",
+      "args": ["--cfg release"],
+      "type": "shell"
+    }
+  ]
+}
