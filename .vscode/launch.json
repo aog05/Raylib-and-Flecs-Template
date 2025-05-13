@@ -6,7 +6,7 @@
       "type": "lldb",
       "request": "launch",
       "name": "Debug",
-      "program": "${workspaceFolder}/bin/arm64-Darwin-sanitize/${id underscore}",
+      "program": "${workspaceFolder}/bin/arm64-Darwin-debug/project-name",
       "args": [],
       "cwd": "${workspaceFolder}"
     },
@@ -15,7 +15,7 @@
       "type": "lldb",
       "request": "launch",
       "name": "Release",
-      "program": "${workspaceFolder}/bin/arm64-Darwin-release/${id underscore}",
+      "program": "${workspaceFolder}/bin/arm64-Darwin-release/project-name",
       "args": [],
       "cwd": "${workspaceFolder}"
     }
