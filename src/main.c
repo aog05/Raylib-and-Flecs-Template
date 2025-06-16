@@ -6,7 +6,6 @@ int main(int argc, char *argv[]) {
     ecs_world_t *world = ecs_init();
     ecs_entity_t ray = ecs_entity(world, { .name = "raysan5" });
 
-    puts(ecs_get_name(world, ray));
     Texture2D logo = LoadTexture("assets/Raylib_logo.png");
 
     while (!WindowShouldClose()) {
