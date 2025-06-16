@@ -1,5 +1,5 @@
 ### I do not own these libraries
-_This is a template that I have made using both Raylib and Flecs libraries using the bake compiler._
+_This is a template that I have made using both Raylib and Flecs libraries using the Bake Build System._
 
 _Please note that neither Raylib (https://github.com/raysan5/raylib) nor Flecs (https://github.com/SanderMertens/flecs/tree/master) belong to me. I have only created this template for ease-of-use for any developers who desire to start using Flecs and Raylib._
 
@@ -15,7 +15,7 @@ If you're using MacOS or Linux you will first need to install **Brew**. Open a n
 ```
 **2. Install Git CLI**
 
-Once that's finished, install the **GitHub CLI** (Command Line Imterface). This is what we will use to install the **bake** compiler.
+Once that's finished, install the **GitHub CLI** (Command Line Imterface). This is what we will use to install the **bake** Build System.
 ```bash
 brew install git
 ```
@@ -23,7 +23,7 @@ brew install git
 
 **3. Install Bake**
 
-Go to this link ([Bake Compiler](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
+Go to this link ([Bake Build System](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
 
 Once downloaded, open the folder. Open a new terminal and drag and drop `setup.sh` into the terminal window. Press return (or enter) in the terminal, enter your password if asked, and close the terminal when done.
 
@@ -41,7 +41,7 @@ cd
 git clone https://github.com/raysan5/raylib.git
 ```
 
-Download this [flecs package](https://github.com/user-attachments/files/17963061/flecs.zip), unzip it, and run:
+Download this [flecs package](https://github.com/user-attachments/files/20028357/flecs.zip), unzip it, and run:
 ```
 cd /path/to/flecs
 bake
@@ -90,7 +90,7 @@ Once it finishes downloading, open the Visual Studio Installer and click "Modify
 
 **3. Install Bake**
 
-Go to this link ([Bake Compiler](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
+Go to this link ([Bake Build System](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
 
 Once downloaded, right-click the zip folder and click "Extract All...". open the folder. Open a new terminal, type `cd`, drag and drop the folder inside (should be called "bake-master") into the terminal window, and hit enter.
 ```powershell
@@ -104,9 +104,9 @@ Run `./setup.bat` after that.
 
 **4. Raylib and Flecs libraries**
 
-Download this zip file ([Raylib for x32](https://github.com/user-attachments/files/18310969/raylibdll.zip) or [Raylib for x64](https://github.com/user-attachments/files/18310976/raylibdll.zip)) and unzip it once it's downloaded.
+Download this zip file [Raylib for x32](https://github.com/user-attachments/files/20745972/raylib32.zip) or [Raylib for x64](https://github.com/user-attachments/files/20745976/raylib64.zip) and unzip it once it's downloaded.
 
-Open "File Explorer" and go to C:\Users\\*you*\bake\lib and put this raylib library in it.
+Open "File Explorer" and go to `C:\Users\you\bake\lib` and put both of these libraries in it.
 
 Download the raylib source files by running,
 ```powershell
@@ -125,7 +125,7 @@ bake
 
 Now let's build the template.
 
-Simply open a terminal and go to a location where you would like to put the template. I will put mine into "~/bake/src/bake/templates".
+Simply open a terminal and go to a location where you would like to put the template. I will put mine into `~/Raylib Projects`.
 
 Once there, run these commands:
 ```powershell
@@ -135,7 +135,7 @@ bake Raylib-and-Flecs-Template
 
 **6. Create the Project**
 
-Go to a folder where you like this project to be. I put mine in a folder called, _"Raylib Projects"_ and run this command.
+Go to a folder where you like this project to be. I put mine in a folder called, *"Raylib Projects"* and run this command.
 ```powershell
 bake new your_project_name -t RaFT
 ```
@@ -191,4 +191,4 @@ Raylib Examples: https://www.raylib.com/examples.html
 
 Raylib CheatSheet: https://www.raylib.com/cheatsheet/cheatsheet.html
 
-Bake Compiler: https://github.com/SanderMertens/bake
+Bake Build System: https://github.com/SanderMertens/bake
