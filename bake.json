@@ -23,6 +23,18 @@
             "sanitize-undefined": false,
             "loop-test": false,
             "assembly": false
+        },
+        "release-lightweight": {
+            "symbols": true,
+            "debug": false,
+            "optimizations": false,
+            "coverage": false,
+            "strict": false,
+            "sanitize-memory": false,
+            "sanitize-thread": false,
+            "sanitize-undefined": false,
+            "loop-test": false,
+            "assembly": false
         }
     }
 }
