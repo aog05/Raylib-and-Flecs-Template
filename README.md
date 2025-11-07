@@ -31,7 +31,7 @@ Once downloaded, open the folder. Open a new terminal and drag and drop `setup.s
 
 **4. Raylib and Flecs Libraries**
 
-Download this zip file [Unix Raylib Library](https://github.com/user-attachments/files/17962571/libraylib.a.zip) and unzip it once it's downloaded.
+Download this zip file [Unix Raylib Library](https://github.com/user-attachments/files/23412159/libraylib.a.zip) and unzip it once it's downloaded.
 
 Open your device root folder (for example: "Macintosh HD" in finder) then go to Users/*you*/bake/lib (or equivalent on Linux) and put this raylib library in it.
 
@@ -41,7 +41,7 @@ cd
 git clone https://github.com/raysan5/raylib.git
 ```
 
-Download this [flecs package](https://github.com/user-attachments/files/20028357/flecs.zip), unzip it, and run:
+Download this [flecs package](https://github.com/user-attachments/files/23412309/flecs.zip), unzip it, and run:
 ```
 cd /path/to/flecs
 bake
@@ -104,7 +104,7 @@ Run `./setup.bat` after that.
 
 **4. Raylib and Flecs libraries**
 
-Download this zip file [Raylib for x32](https://github.com/user-attachments/files/20745972/raylib32.zip) or [Raylib for x64](https://github.com/user-attachments/files/20745976/raylib64.zip) and unzip it once it's downloaded.
+Download this zip file [Raylib for x32](https://github.com/user-attachments/files/23412203/raylib32.zip) or [Raylib for x64](https://github.com/user-attachments/files/23412214/raylib64.zip) and unzip it once it's downloaded.
 
 Open "File Explorer" and go to `C:\Users\you\bake\lib` and put both of these libraries in it.
 
@@ -146,26 +146,18 @@ If you ever want to make a new project, all you have to do is repeat this step.
 
 ## Build for Web
 
-In your existing project, run these commands for your specific platform.
+In your project, run this command to generate the JS and WASM files. You also have to download the HTML that will display the canvas. Put the HTML into the same directory as your WASM and JS files.
 
 **For all platforms and languages**
 ```powershell
-bake --target em
+bake --target em --cfg release-lightweight
 ```
 
-**Web MacOS and Linux**
+[HTML Canvas](https://github.com/user-attachments/files/23412023/index.html.zip)
 
-Copy and paste this at the root of your project.
-```bash
-emcc -o bin/game.html .bake_cache/Em-debug/obj/main.o .bake_cache/Em-debug/obj/flecs.o -Wall -std=c99 -D_DEFAULT_SOURCE -Wno-missing-braces -Wunused-result --embed-file assets -Os -I ~/raylib/src -I ~/raylib/src/external -I include -I deps -s USE_GLFW=3 -s ASYNCIFY -s TOTAL_MEMORY=67108864 -s FORCE_FILESYSTEM=1 --shell-file ~/raylib/src/minshell.html ~/raylib/src/web/libraylib.a -DPLATFORM_WEB -s 'EXPORTED_FUNCTIONS=["_free","_malloc","_main"]' -s EXPORTED_RUNTIME_METHODS=ccall
-```
+**Update the HTML**
 
-**Web Windows**
-
-Copy and paste this at the root of your project.
-```powershell
-emcc -o bin/game.html .bake_cache/Em-debug/obj/main.o .bake_cache/Em-debug/obj/flecs.o -Wall -std=c99 -D_DEFAULT_SOURCE -Wno-missing-braces -Wunused-result --embed-file assets -Os -I C:/raylib/src -I C:/raylib/src/external -I include -I deps -s USE_GLFW=3 -s ASYNCIFY -s TOTAL_MEMORY=67108864 -s FORCE_FILESYSTEM=1 --shell-file C:/raylib/src/minshell.html C:/raylib/src/web/libraylib.a -DPLATFORM_WEB -s 'EXPORTED_FUNCTIONS=["_free","_malloc","_main"]' -s EXPORTED_RUNTIME_METHODS=ccall
-```
+Almost done, just make sure to replace every instance of "YourGame" in the HTML with the actual name of your project. You can also change the width and height on the canvas if you choose.
 
 **Test on the Web**
 
