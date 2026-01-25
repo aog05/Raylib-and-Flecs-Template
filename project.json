@@ -1,6 +1,6 @@
 {
-  "id": "RaFT",
-  "type": "template",
+  "id": "GoneVsWar",
+  "type": "application",
   "value": {
     "author": "Sander Mertens and Raysan5",
     "description": "A template including both Raylib and Flecs!",
@@ -8,8 +8,19 @@
     "standalone": true
   },
   "lang.c": {
+    "include": ["."],
     "${os linux}": {
-      "lib": ["rt", "pthread", "m", "GL", "X11", "Xi", "Xcursor", "dl", "raylib"]
+      "lib": [
+        "rt",
+        "pthread",
+        "m",
+        "GL",
+        "X11",
+        "Xi",
+        "Xcursor",
+        "dl",
+        "raylib"
+      ]
     },
     "${os windows}": {
       "static-lib": ["raylibdll", "gdi32", "opengl32", "winmm"],
@@ -29,19 +40,16 @@
       "defines": ["FLECS_SANITIZE"]
     },
     "${target em}": {
-      "libpath": ["~/raylib/src"],
       "embed": ["assets"],
+      "lib": ["raylibweb"],
       "ldflags": [
-        "-I ~/raylib/src",
-        "-I ~/raylib/src/external",
         "-s USE_GLFW=3",
         "-s ASYNCIFY",
-        "-s TOTAL_MEMORY=67108864",
         "-s FORCE_FILESYSTEM=1",
         "-s EXPORTED_FUNCTIONS=['_free','_malloc','_main']",
         "-s EXPORTED_RUNTIME_METHODS=ccall",
-        "--shell-file ~/raylib/src/minshell.html ~/raylib/src/web/libraylib.a",
-        "-D PLATFORM_WEB"
+        "-s ALLOW_MEMORY_GROWTH=1",
+        "-s STACK_SIZE=1073741824"
       ]
     }
   }
