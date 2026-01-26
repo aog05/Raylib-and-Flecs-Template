@@ -5,11 +5,12 @@ REM Using Raylib 5.5 and Flecs 4.1.4
 
 set "RAFT_NAME=Raylib-and-Flecs-Template"
 set "ARCHITECTURE=%PROCESSOR_ARCHITECTURE%"
+set BAKEEXE=%USERPROFILE%\bake\bakebin.exe
 
-echo [1;34mStarting install...[0m
+echo Starting install...
 
 REM Check if bake is installed
-bake --version >nul 2>&1
+%BAKEEXE% --version >nul 2>&1
 if errorlevel 1 (
     echo Please install bake before using this tool
     echo.
@@ -17,9 +18,14 @@ if errorlevel 1 (
     
     if /i "!response!"=="y" (
         echo Installing bake to %USERPROFILE%...
-        git clone -q --progress https://github.com/SanderMertens/bake "%USERPROFILE%\bake_temp"
-        call "%USERPROFILE%\bake_temp\setup.bat"
-        rmdir /s /q "%USERPROFILE%\bake_temp"
+        git clone -q --progress https://github.com/SanderMertens/bake %USERPROFILE%\bake_temp
+        cd %USERPROFILE%\bake_temp
+        call setup
+        cd %USERPROFILE%
+        rmdir /s /q %USERPROFILE%\bake_temp
+
+        echo Open a new terminal and run this script again to finish setup
+        exit /b 0
     ) else if /i "!response!"=="n" (
         exit /b 0
     ) else (
@@ -29,19 +35,19 @@ if errorlevel 1 (
 )
 
 echo.
-echo [1;34mBuilding Flecs package...[0m
-cd /d "%USERPROFILE%\bake"
+echo Building Flecs package...
+cd %USERPROFILE%\bake
 if exist flecs rmdir /s /q flecs >nul 2>&1
-bake new flecs --package >nul 2>&1
+%BAKEEXE% new flecs --package >nul 2>&1
 curl -so ./flecs/src/flecs.c https://raw.githubusercontent.com/SanderMertens/flecs/master/distr/flecs.c
 curl -so ./flecs/include/flecs.h https://raw.githubusercontent.com/SanderMertens/flecs/master/distr/flecs.h
-del /q ./flecs/src/main.c
-bake flecs --cfg debug >nul 2>&1
-bake flecs --cfg release >nul 2>&1
-bake flecs --cfg sanitize >nul 2>&1
+del .\flecs\src\main.c
+%BAKEEXE% flecs --cfg debug >nul 2>&1
+%BAKEEXE% flecs --cfg release >nul 2>&1
+%BAKEEXE% flecs --cfg sanitize >nul 2>&1
 
 echo.
-echo [1;34mGetting Raylib library...[0m
+echo Getting Raylib library...
 REM Download Raylib for Windows
 if "%ARCHITECTURE%"=="AMD64" goto ARCHITECTURE_64
 if "%ARCHITECTURE%"=="IA64" goto ARCHITECTURE_64
@@ -76,16 +82,16 @@ rmdir /s /q raylib-5.5_webassembly
 del /q raylib-5.5_webassembly.zip
 
 echo.
-echo [1;34mGetting Raylib and Flecs Template...[0m
+echo Getting Raylib and Flecs Template...
 if exist %RAFT_NAME% rmdir /s /q %RAFT_NAME% >nul 2>&1
 git clone -q --progress https://github.com/aog05/Raylib-and-Flecs-Template.git %RAFT_NAME%
-bake %RAFT_NAME% >nul 2>&1
+%BAKEEXE% %RAFT_NAME% >nul 2>&1
 
 echo.
-echo [1;32mAll done! Create a new project with:[0m
-echo [1mbake new my_game -t RaFT[0m
+echo All done! Create a new project with:
+echo bake new my_game -t RaFT
 echo.
-echo [1;32mRun the game using in the game's directory:[0m
-echo [1mbake run[0m
+echo Run the game using in the game's directory:
+echo bake run
 
 endlocal

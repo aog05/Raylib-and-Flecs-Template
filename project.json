@@ -1,6 +1,6 @@
 {
   "id": "GoneVsWar",
-  "type": "application",
+  "type": "template",
   "value": {
     "author": "Sander Mertens and Raysan5",
     "description": "A template including both Raylib and Flecs!",
