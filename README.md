@@ -1,155 +1,113 @@
 ### I do not own these libraries
+
 _This is a template that I have made using both Raylib and Flecs libraries using the Bake Build System._
 
-_Please note that neither Raylib (https://github.com/raysan5/raylib) nor Flecs (https://github.com/SanderMertens/flecs/tree/master) belong to me. I have only created this template for ease-of-use for any developers who desire to start using Flecs and Raylib._
+_Please note that neither [Raylib](https://github.com/raysan5/raylib) nor [Flecs](https://github.com/SanderMertens/flecs/tree/master) belong to me. I have only created this template for ease-of-use for any developers who desire to start using Flecs and Raylib._
 
 # ------ SETTING UP THE PROJECT ------
+
 If this is your first time setting up a project, I will walk you through all of the steps for getting started.
 
-## MacOS or Linux
-**1. First, install Brew.**
+## MacOS or Linux (3 Steps!)
 
-If you're using MacOS or Linux you will first need to install **Brew**. Open a new terminal and run this command:
+**1. Get the install.sh script**
+
+After downloading the script, go into a terminal and enter these command:
+
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+cd path/to/install.sh
+sh install.sh
 ```
-**2. Install Git CLI**
 
-Once that's finished, install the **GitHub CLI** (Command Line Imterface). This is what we will use to install the **bake** Build System.
+If you don't already have it, this script will ask you if you want to install the bake build system. You will need it in order to use this template.
+
+**2. Make a project**
+
+After the install finishes, create and run a project using the Raylib and Flecs Template.
+
 ```bash
-brew install git
-```
-> Run `git --version` to make sure it installed correctly. The result should be something like `git version 2.49.1`.
-
-**3. Install Bake**
-
-Go to this link ([Bake Build System](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
-
-Once downloaded, open the folder. Open a new terminal and drag and drop `setup.sh` into the terminal window. Press return (or enter) in the terminal, enter your password if asked, and close the terminal when done.
-
-> Again, ensure it installed correctly with `bake --version`
-
-**4. Raylib and Flecs Libraries**
-
-Download this zip file [Unix Raylib Library](https://github.com/user-attachments/files/23412159/libraylib.a.zip) and unzip it once it's downloaded.
-
-Open your device root folder (for example: "Macintosh HD" in finder) then go to Users/*you*/bake/lib (or equivalent on Linux) and put this raylib library in it.
-
-Download the raylib source files by running,
-```bash
-cd
-git clone https://github.com/raysan5/raylib.git
+bake new my_game -t RaFT
 ```
 
-Download this [flecs package](https://github.com/user-attachments/files/23412309/flecs.zip), unzip it, and run:
-```
-cd /path/to/flecs
-bake
-```
-> Note: if this package is moved, you have to run `bake` again.
+**3. Run your game!**
 
-**5. Build the Template**
+Try `bake run my_game` to see your game running.
 
-Now let's build the template.
+Open a code editor, like VS Code, at your game's location and run `bake run` in the terminal.
+You can also use the play button ▶ or hit `F5` to run the game.
 
-Simply open a terminal and go to a location where you would like to put the template. I will put mine into "~/bake/src/bake/templates".
-
-Once there, run these commands:
-```bash
-git clone https://github.com/aog05/Raylib-and-Flecs-Template
-bake Raylib-and-Flecs-Template
-```
-
-**6. Create the Project**
-
-Go to a folder where you like this project to be. I put mine in a folder called, *"Raylib Projects"* and run this command.
-```bash
-bake new your_project_name -t RaFT
-```
+## Windows (A Few More Steps)
 
 Run the program with: `bake run`.
 
 If you ever want to make a new project, all you have to do is repeat this step.
 
 ## Windows
-Windows is a slightly tougher version to build for, so if there are any problems, you can report them here or on Discord.
 
-**1. Install Git CLI**
+> Windows is a slightly tougher version to build for, so if there are any problems, you can report them [here](https://github.com/aog05/Raylib-and-Flecs-Template/issues) or on [Discord](https://discord.gg/QzBM86a2Pj).
 
-If you haven't already download the GitHub CLI (Command Line Interface) run the command below.
-```powershell
-winget install --id Git.Git -e --source winget
-```
-> Note: this command only works on Windows 11. Go [here](https://git-scm.com/downloads/win) for previous versions.
+**1. Install Visual Studio Build Tools**
 
-**2. Install Visual Studio Build Tools**
-
-First, follow this link ([Download Bulid Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)) and go down to "Tools for Visual Studio" and click download on "Build Tools for Visual Studio" at the bottom of the selection.
+First, follow this link ([Download Bulid Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2026)) and go down to "Tools for Visual Studio" and click download on "Build Tools for Visual Studio" at the bottom of the selection.
 
 Once it finishes downloading, open the Visual Studio Installer and click "Modify". After that, select "Desktop Development with C++" and click "Modify" in the bottom right. You can close the installer once it finishes installing.
 
-**3. Install Bake**
+**2. Download the install.bat script**
 
-Go to this link ([Bake Build System](https://github.com/SanderMertens/bake)) and click "Code" and download the zip file.
+Install the install.bat file that's in this repository.
 
-Once downloaded, right-click the zip folder and click "Extract All...". open the folder. Open a new terminal, type `cd`, drag and drop the folder inside (should be called "bake-master") into the terminal window, and hit enter.
-```powershell
-# The command should look like this
-cd C:\Users\your_username\Downloads\bake-master\bake-master
-```
+**3. Open a developer Powershell**
 
-Run `./setup.bat` after that.
+Hit the windows key and type "CMD". This will open a terminal window with Command Prompt. Click on the arrow next to opening a new terminal tab and select "Developer Powershell".
 
-> Again, ensure it installed correctly with `bake --version`
+After opening a new Developer Powershell, enter these commands:
 
-**4. Raylib and Flecs libraries**
-
-Download this zip file [Raylib for x32](https://github.com/user-attachments/files/23412203/raylib32.zip) or [Raylib for x64](https://github.com/user-attachments/files/23412214/raylib64.zip) and unzip it once it's downloaded.
-
-Open "File Explorer" and go to `C:\Users\you\bake\lib` and put both of these libraries in it.
-
-Download the raylib source files by running,
 ```powershell
 cd
-git clone https://github.com/raysan5/raylib.git
+cd path\to\install.bat
+install
 ```
 
-Download this [flecs package](https://github.com/user-attachments/files/17963061/flecs.zip), unzip it, and run:
+**4. Installing Bake**
+
+If you do not have the Bake Build System, it will prompt you if you want to install it. Choose "y" here because it's required to use this template.
+
+**5. Rerun the install.bat in a new developer terminal**
+
+Unfortunately, because of how Windows works, you must open a new Developer Powershell and run the same commands again.
+
 ```powershell
-cd \path\to\flecs
-bake
-```
-> Note: if this package is moved, you have to run `bake` again.
-
-**5. Build the Template**
-
-Now let's build the template.
-
-Simply open a terminal and go to a location where you would like to put the template. I will put mine into `~/Raylib Projects`.
-
-Once there, run these commands:
-```powershell
-git clone https://github.com/aog05/Raylib-and-Flecs-Template
-bake Raylib-and-Flecs-Template
+cd
+cd path\to\install.bat
+install
 ```
 
-**6. Create the Project**
+**6. Add bake to path (May not be required)**
 
-Go to a folder where you like this project to be. I put mine in a folder called, *"Raylib Projects"* and run this command.
-```powershell
-bake new your_project_name -t RaFT
+If the commands below do not work because bake is not a valid command, add `%USERPROFILE%\bake` to your `PATH` environment variable.
+
+**7. Make a project**
+
+After the install finishes, create and run a project using the Raylib and Flecs Template.
+
+```bash
+bake new my_game -t RaFT
 ```
 
-Run the program with: `bake run`.
+**8. Run your game!**
 
-If you ever want to make a new project, all you have to do is repeat this step.
+Try `bake run my_game` to see your game running.
+
+Open a code editor, like VS Code, at your game's location and run `bake run` in the terminal.
+You can also use the play button ▶ or hit `F5` to run the game.
 
 ## Build for Web
 
 In your project, run this command to generate the JS and WASM files. You also have to download the HTML that will display the canvas. Put the HTML into the same directory as your WASM and JS files.
 
 **For all platforms and languages**
-```powershell
+
+```bash
 bake --target em --cfg release-lightweight
 ```
 
@@ -175,6 +133,7 @@ python -m http.server
 By the way, if this is for itch.io, you have to take the HTML, JS, and WASM and compress them to a zip file. You can upload the zip file for web games on itch!
 
 # ------ REFERENCES ------
+
 Reference Articles:
 
 Flecs Quickstart: https://www.flecs.dev/flecs/md_docs_2Quickstart.html
