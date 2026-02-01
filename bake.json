@@ -5,7 +5,7 @@
       "debug": true,
       "optimizations": false,
       "coverage": true,
-      "strict": true,
+      "strict": false,
       "sanitize-memory": true,
       "sanitize-thread": false,
       "sanitize-undefined": true,
