@@ -3,7 +3,7 @@
 $RAFT_NAME = "Raylib-and-Flecs-Template"
 $ARCHITECTURE = $env:PROCESSOR_ARCHITECTURE
 $BAKEEXE = "$env:USERPROFILE\bake\bakebin.exe"
-# $ERRORACTIONPREFERENCE = "silentlycontinue"
+$ERRORACTIONPREFERENCE = "silentlycontinue"
 
 Write-Host "Starting install..."
 
