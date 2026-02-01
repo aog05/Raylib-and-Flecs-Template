@@ -64,6 +64,7 @@ echo ""
 echo "$ESC[1;34mGetting Raylib and Flecs Template...$ESC[0m"
 rm -rf $RAFT_NAME > /dev/null
 git clone -q --progress https://github.com/aog05/Raylib-and-Flecs-Template.git $RAFT_NAME
+rm $RAFT_NAME/install*
 bake $RAFT_NAME > /dev/null
 
 echo ""

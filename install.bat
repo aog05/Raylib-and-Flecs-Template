@@ -85,6 +85,7 @@ echo.
 echo Getting Raylib and Flecs Template...
 if exist %RAFT_NAME% rmdir /s /q %RAFT_NAME% >nul 2>&1
 git clone -q --progress https://github.com/aog05/Raylib-and-Flecs-Template.git %RAFT_NAME%
+del %RAFT_NAME%\install*
 %BAKEEXE% %RAFT_NAME% >nul 2>&1
 
 echo.
